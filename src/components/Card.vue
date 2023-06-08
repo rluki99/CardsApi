@@ -1,0 +1,30 @@
+<script setup>
+    import { defineProps } from 'vue';
+
+    const {image, name} = defineProps(['image', 'name'])
+
+</script>
+
+<template>
+	<n-card>
+		<template #cover>
+			<img :src="image" />
+		</template>
+		<h3>{{ name }}</h3>
+		<slot></slot>
+	</n-card>
+</template>
+
+<style scoped>
+.n-card {
+	width: 160px;
+	margin: 10px 20px;
+}
+.n-card img {
+	height: 190px;
+}
+
+p {
+	font-size: 10px;
+}
+</style>
